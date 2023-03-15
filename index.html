@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Портфолио</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="page-body">
+    <header class="header" id="home">
+        <button class="open-menu" type="button" aria-label="открыть меню навигации">∞ Меню</button>
+        <nav class="main-nav">
+            <ul class="navigation-list">
+                <li class="list-item"><a class="list-link" href="#about" aria-label="вернуться к началу страницы">Обо
+                        мне</a></li>
+                <li class="list-item"><a href="#portfolio" class="list-link"
+                        aria-label="Перейти к информации обо мне">Портфолио</a></li>
+                <li class="list-item"><a href="#example" class="list-link" aria-label="Перейти к портфолио">Примеры
+                        работ</a>
+                </li>
+                <li class="list-item"><a href="#contacts" class="list-link"
+                        aria-label="Перейти к контактной информации">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="scroll-top">
+            <p>Прокрутите вниз,чтобы увидеть больше</p>
+        </div>
+    </header>
+    <main class="main-content">
+        <h1 class="visually-hidden">Страница с информацией обо мне</h1>
+        <nav class="additional-pagination content-container">
+            <ul class="additional-list">
+                <li class="additional-item"><a class="additional-link" href="#about" class="additional-link"
+                        aria-label="Перейти на страницу Обо мне">Обо мне</a>
+                </li>
+                <li class="additional-item"><a class="additional-link" href="#portfolio" class="additional-link"
+                        aria-label="Перейти на страницу портфолио">Портфолио</a></li>
+                <li class="additional-item"><a class="additional-link" href="#example" class="additional-link"
+                        aria-label="Вы находитесь на главной странице">Примеры работ</a></li>
+                <li class="additional-item"><a class="additional-link" href="#contacts" class="additional-link"
+                        aria-label="Перейти на страницу контактной информации">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="flex-box">
+            <picture class="my-foto">
+                <source media="(max-width: 767px)" srcset="img/my-foto-mobile.jpg">
+                <source media="(min-width: 768px)" srcset="img/my-foto.jpg">
+                <img src="img/my-foto.jpg" alt="Моя фотография">
+            </picture>
+            <section class="about content-container" id="about">
+                <h2 class="about-title">Обо мне</h2>
+                <p class="about-text">Меня зовут Николай, мне 26 лет. Живу в Москве в районе Кузьминки.
+                    Выпускник Института мировых цивилизаций по специализации "Управление персоналом".
+                    Люблю компьютерную технику и многое,что с ней связано. Часто помогаю друзьям подобрать
+                    комплектующие к компьютеру и после помочь собрать. Английским владею на среднем уровне. Люблю
+                    видеоигры и чтение.
+                    Несколько раз в неделю занимаюсь фитнесом. Занимаюсь коллекционированием комиксов и манги.
+                    Люблю слушать музыку.
+                </p>
+                <p class="about-text">Разработкой сайтов начал интересоваться недавно (в апреле 2020),
+                    проходил интерактивыне тренажёры и прошёл несколько курсов по вёрстке. Хорошо знаю HTML и CSS, имею
+                    опыт адаптивной вёрстки с использованием БЭМ, LESS, GIT, GULP, NPM. Знаком с основами JavaScript и
+                    JQuery.
+                    Знаком с Tilda и WorldpPress. Хочу учиться,работать и развиваться в сфере web-разработки. </p>
+                <div class="cite">Малышев Николай</div>
+            </section>
+        </div>
+        <!-- <div class="scroll-bottom">
+            <p>Прокрутите вниз,чтобы увидеть больше</p>
+        </div> -->
+        <section class="portfolio" id="portfolio">
+            <h2 class="portfolio-title content-container">Портфолио</h2>
+            <div class="portfolio-experience content-container">
+                <h3 class="portfolio-subtitle">Опыт работы</h3>
+                <div class="job">Фриланс</div>
+                <div class="date">Октябрь 2022 -<br>
+                    настоящее время</div>
+                <div class="duties">
+                    <span>Frontend-разработчик</span>
+                    <p class="duties-text">
+                        - Разработка сайтов на Тильде.<br>
+                        - Внесение правок на уже существующие сайты.<br>
+                        - Улучшения функционала сайтов на Тильде с помощью html, css и JQuery.
+                    </p>
+                </div>
+                <div class="job">ГУП Экотехпром Региональный Оператор</div>
+                <div class="date">Январь 2022 -<br>
+                    Сентябрь 2022</div>
+                <div class="duties">
+                    <span>Специалист линейного отдела</span>
+                    <p class="duties-text">
+                        - Оперативное решение задач поставленных руководством.<br>
+                        - Обработка жалоб поступающих на телефон, помощь в решении проблем.<br>
+                        - Обзвон контрагентов, для решения проблем, описанных в официальных письмах.<br>
+                        - Составление официальных ответов на жалобы от контрагентов поступивших, через внутреннюю
+                        почту.<br>
+                        - Обход мест накопления отходов для учёта и поиска нарушения.<br>
+                        - Составление актов по найденным нарушениям.<br>
+                        - Ведение учёта мест накопления учёта в Excel и на сайте Департамента ЖКХ tsoo.mos.ru.<br>
+                        - Взаимодействие с юридическим отделом и договорным отделом для оперативного решения задач.
+                    </p>
+                </div>
+                <div class="job">Онлайн школа курсов Smirnov School</div>
+                <div class="date">Август 2021 -<br>
+                    Декабрь 2021</div>
+                <div class="duties">
+                    <span>Frontend-разработчик</span>
+                    <p class="duties-text">
+                        - Создание лэндингов в Тильде с помощью функционала конструктора.<br>
+                        - Доработка и редактирование существующих страниц.<br>
+                        - Создание кастомных блоков с помощью html и css.<br>
+                        - Расширение функционала сайта с помощью скриптов на JQuery.<br>
+                        - Установка событий для сервисов аналитики(Yandex, VK, Facebook, Amplitude).
+                    </p>
+                </div>
+                <div class="job">Фриланс</div>
+                <div class="date">Май 2021 -<br>
+                    Август 2021</div>
+                <div class="duties">
+                    <p class="duties-text">
+                        - Разработка сайтов с использованием bootstrap.<br>
+                        - Создание новых страниц на сайте с использованием Wordpress, доработка уже готовых страниц.<br>
+                        - Создание скриптов на ванильном JavaScript или с использованием JQuery
+                    </p>
+                </div>
+                <div class="job">Интернет магазин mac77.ru</div>
+                <div class="date">Февраль 2018 -<br>
+                    Апрель 2020</div>
+                <div class="duties">
+                    <span>Старший менеджер по продажам</span>
+                    <p class="duties-text">
+                        - Прямые и не прямые продажи<br>
+                        - Обзвон клиентов интернет магазина, подтверждение заказов<br>
+                        - Консультации по продукции магазина<br>
+                        - Модульная замена комплектующих и не сложный ремонт компьютерной техники<br>
+                        - Диагностика неисправностей компьютерной техники<br>
+                        - Установка OS и различного ПО<br>
+                        - Подбор и собеседование новых сотрудников.<br>
+                        - Построение маршрутов,отправка курьеров и дистанционное курирование<br>
+                        - Распределение обязанностей между младшим персоналом<br>
+                        - Финансовый учет(ведение кассы, приём и передача денег клиентам и курьерам).<br>
+                        - Учёт и инвентаризация компьютерной техники в наличии.<br>
+                        - Составление Договоров купли-продажи, товарных накладных, счётов, счетов-фактур.<br>
+                        - Участие в закупках необходимого оборудования и товаров<br>
+                        - Разрешение конфликтных ситуаций возникающих в ходе торговых отношений.<br>
+                        - Сверка актуальности информации на сайте магазина<br>
+                        - Работа с транспортными компаниями СДЕК, Boxberry, DPD, Почта России
+                    </p>
+                </div>
+            </div>
+            <div class="example content-container">
+                <h3 class="example-title" id="example">Примеры работ</h3>
+                <p class="example-text">Успешно прошёл курсы по вёрстке web-страниц и защитил
+                    учебные проекты. Имеется опыт коммерческой разработки. Вот примеры последних моих проектов: </p>
+                <p class="example-text"><a class="example-link" href="https://adamant-clinic.ru/"
+                        aria-label="Перейти на страницу Стоматологической клиники Адамант">Стоматологическиая клиника
+                        "Адамант"</a>.
+                    По заданию было необходимо перенести все основные страницы сайта с Drupal на Тильду с изменением
+                    дизайна некоторых частей сайта.</p>
+                <a class="example-link" href="https://adamant-clinic.ru/"
+                    aria-label="Перейти на страницу cтоматологической клиники Адамант"><img class="example-link--image"
+                        src="img/adamant-1.jpg" alt="Изображение верхней части главной страницы техномарта"></a>
+                <a class="example-link" href="https://adamant-clinic.ru/about"
+                    aria-label="Перейти на страницу cтоматологической клиники Адамант"><img class="example-link--image"
+                        src="img/adamant-2.jpg" alt="Изображение страницы О клинике"></a>
+                <a class="example-link" href="https://adamant-clinic.ru/restoration"
+                    aria-label="Перейти на страницу cтоматологической клиники Адамант"><img class="example-link--image"
+                        src="img/adamant-3.jpg" alt="Изображение со страницы Восстановление зубов"></a>
+                <p class="example-text"><a class="example-link" href="https://vagisrael.co.il/ru"
+                        aria-label="Перейти на страницу автомастерской Vag">Автомастерская "Vag"</a>. Сайт
+                    автомастерской реализован на русском и на иврите.</p>
+                <a class="example-link" href="https://vagisrael.co.il/ru"
+                    aria-label="Перейти на страницу автомастерской Vag"><img class="example-link--image"
+                        src="img/vag-israel-1.jpg"
+                        alt="Изображение с главной страницы автомастерской Vag на русском языке"></a>
+                <a class="example-link" href="https://vagisrael.co.il/#about"
+                    aria-label="Перейти на страницу автомастерской Vag"><img class="example-link--image"
+                        src="img/vag-israel-2.jpg"
+                        alt="Изображение с главной страницы автомастерской Vag на иврите"></a>
+                <a class="example-link" href="https://vagisrael.co.il/ru"
+                    aria-label="Перейти на страницу автомастерской Vag"><img class="example-link--image"
+                        src="img/vag-israel-3.jpg"
+                        alt="Изображение с главной страницы автомастерской Vag на русском языке"></a>
+
+                <p class="example-text"><a class="example-link" href="https://fma-mobile.tilda.ws/"
+                        aria-label="Перейти на страницу FMA-Mobile">Фан сайт по мобильной игре Fullmetal Alchemist</a>.
+                    Сайт с руководствовами по мобильной игре. Создавалася в первую очередь для собственного удобства,
+                    поскольку адекватных сайтов нет ни на английском, ни на русском, а только на японском.</p>
+                <a class="example-link" href="https://fma-mobile.tilda.ws/"
+                    aria-label="Перейти на страницу FMA-Mobile"><img class="example-link--image" src="img/fma-1.jpg"
+                        alt="Изображение с главной страницы FMA-Mobile"></a>
+                <a class="example-link" href="https://fma-mobile.tilda.ws/olivia#!/tab/550116421-2"
+                    aria-label="Перейти на страницу с описанием персонажа FMA-Mobile"><img class="example-link--image"
+                        src="img/fma-2.jpg" alt="Изображение со страницы одного из персонажей игры"></a>
+                <a class="example-link" href="https://fma-mobile.tilda.ws/tier-list#!/tab/547070494-4"
+                    aria-label="Перейти на страницу с рейтингом персонажей FMA-Mobile"><img class="example-link--image"
+                        src="img/fma-3.jpg"
+                        alt="Изображение со страницы с рейтингом персонажей игры"></a>
+                <a class="example-link" href="https://fma-mobile.tilda.ws/"
+                    aria-label="Перейти на страницу с рейтингом персонажей FMA-Mobile"><img class="example-link--image"
+                        src="img/fma-4.jpg"
+                        alt="Изображение с подвала сайта"></a>
+
+
+                <p class="example-text"><a class="example-link" href="/technomart/index.html"
+                        aria-label="Перейти на страницу техномарта">Техномарт</a> это статичная страница магазина
+                    техники. На данном сайте реализованы
+                    две страниц - главная и странциа каталога. Так же есть страницы модальных окон, которые в обычной
+                    ситуации открываются с помощью JavaScript, но если по какой-то причине JavaScript не сработает, то
+                    пользователя перенесёт на отдельную страничку с модальным окном.</p>
+                <a class="example-link" href="/technomart/index.html" aria-label="Перейти на страницу техномарта"><img
+                        class="example-link--image" src="img/techmart-home.jpg"
+                        alt="Изображение верхней части главной страницы техномарта"></a>
+                <a class="example-link" href="/technomart/index.html" aria-label="Перейти на страницу техномарта"><img
+                        class="example-link--image" src="img/techmart-home-footer.jpg"
+                        alt="Изображение нижней части главной страницы техномарта"></a>
+                <a class="example-link" href="/technomart/index.html" aria-label="Перейти на страницу техномарта"><img
+                        class="example-link--image" src="img/techmart-catalog.jpg"
+                        alt="Изображение страницы каталога Техномарта"></a>
+                <p class="example-text"><a class="example-link" href="/cat-energy/build/index.html" aria-label="Перейти на страницу Cat
+                    Energy">Cat Energy</a> это магазин по продаже здорового питания для котов. У данного сайта имеется
+                    3
+                    адаптивные версии - для мобильных устройств с шириной от 320px, для планшетов с широной от 768px и
+                    десктопная версия с шириной от 1440px. Сайт хорошо выглядит,не только на этих разрешениях,но и на
+                    промежуточных значениях.
+                    Навигация по сайту на мобльном разрешении открывается и закрывается при нажатии на кнопки, по
+                    умолчнаию оно скрыто. Для ситуация когда JavaScript может не работать, меню по умолчанию открыто,а
+                    когда JavaScript загружаетсяЮ оно скрывается и работает в штатном режиме.
+                </p>
+                <a class="example-link" href="/cat-energy/build/index.html" aria-label="Перейти на страницу Cat
+                Energy"><img class="example-link--image" src="img/cat-energy-home.jpg"
+                        alt="Изображение главной страницы Cat Energy"></a>
+                <a class="example-link" href="/cat-energy/build/index.html" aria-label="Перейти на страницу Cat
+                Energy"><img class="example-link--image" src="img/cat-energy-catalog.jpg"
+                        alt="Изображение страницы каталога Cat Energy"></a>
+                <a class="example-link" href="/cat-energy/build/index.html" aria-label="Перейти на страницу Cat
+                Energy"><img class="example-link--image" src="img/cat-energy-form.jpg"
+                        alt="Изображение страницы форм Cat Energy"></a>
+                <a class="example-link" href="/cat-energy/build/index.html" aria-label="Перейти на страницу Cat
+                Energy"><img class="example-link--image" src="img/cat-energy-mobile.jpg"
+                        alt="Изображение мобильной версии Cat Energy"></a>
+                <p class="example-text"><a class="example-link" href="/pathogenesis/index.html"
+                        aria-label="Перейти на страницу терапии патогенеза">Этот сайт</a> представляет из себя небольшую
+                    презентацию для планшетов с шириной экрана 1024px. На первой страничке сайта реализована простенькая
+                    анимация пульсации. При перелистывании слайдов вниз, меняется индикация справа. Последний слайд
+                    реализован в виде слайдера.</p>
+                <a class="example-link" href="/pathogenesis/index.html"
+                    aria-label="Перейти на страницу терапии патогенеза"><img class="example-link--image"
+                        src="img/pathogenesis-first-slide.jpg" alt="Изображение главной страницы о патогенезе"></a>
+                <a class="example-link" href="/pathogenesis/index.html"
+                    aria-label="Перейти на страницу терапии патогенеза"><img class="example-link--image"
+                        src="img/pathogenesis-second-slide.jpg" alt="Изображение первого слайда-схемы о патогенезе"></a>
+                <a class="example-link" href="/pathogenesis/index.html"
+                    aria-label="Перейти на страницу терапии патогенеза"><img class="example-link--image"
+                        src="img/pathogenesis-last-slide.jpg" alt="Изображение третьего слайда-схемы о патогенезе"></a>
+                <p class="example-text"><a class="example-link" href="/kekstagram/build/index.html"
+                        aria-label="Перейти на страницу кекстаграма">Kekstagram</a> представляет из себя небольшую
+                    социальную сеть.
+                    На данном сайте можно просматривать изображения с главной страницы,
+                    сортировать их по количеству комментариев или отсортировать 10 случайных.
+                    Изображения, комментарии и прочая информация, берутся с сервера.
+                    Каждую картинку можно посмотреть и почитать комментарии.
+                    По центру страницы есть кнопка для загрузки собственного изображения.
+                    К изображению можно применять фильтры и менять масштаб.
+                    Так же к загружаемому изображению можно оставить описание и хэштеги, которые проходят валидацию.
+                    Изображение так же отправляется на сервер.
+                </p>
+                <a class="example-link" href="/kekstagram/build/index.html"
+                    aria-label="Перейти на страницу кекстаграма"><img class="example-link--image"
+                        src="img/kekstagram-main.jpg" alt="Изображение главной страницы кекстаграма"></a>
+                <a class="example-link" href="/kekstagram/build/index.html"
+                    aria-label="Перейти на страницу кекстаграма"><img class="example-link--image"
+                        src="img/kekstagram-watch.jpg" alt="Изображение просмотра картинок с главной страницы"></a>
+                <a class="example-link" href="/kekstagram/build/index.html"
+                    aria-label="Перейти на страницу кекстаграма"><img class="example-link--image"
+                        src="img/kekstagram-upload.jpg" alt="Изображение загрузки своего изображения"></a>
+
+                <p class="example-text"><a class="example-link" href="/ndv-test/build/index.html"
+                        aria-label="Перейти на страницу Сказочного леса">Сказочный лес</a> это презентационная страница
+                    района от застройшика. У данного сайта имеются брейкпоинты нас ледующих разрешениях : 375px, 768px,
+                    1152px, 1440px и 1920 px. На мобильнйо и планшетной версии выпадающее меню сделано с помощью
+                    JavaScript</p>
+                <a class="example-link" href="/ndv-test/build/index.html"
+                    aria-label="Перейти на страницу Сказочного леса"><img class="example-link--image"
+                        src="img/forest.jpg" alt="Изображение верхней части главной страницы сказочного леса"></a>
+
+                <p class="example-text"><a class="example-link" href="https://volgaheim.com/school-young-guide_test.php"
+                        aria-label="Перейти на страницу школы юного гида">Школа юного гида</a> это презентационная
+                    страница школы волонтёров. Как такового макета у страницы не было, была только пдф
+                    презентацию,которую было необходимо было адаптировать для отображения на сайте. Страница сделана с
+                    использованием Bootstrap и анимаций со слайдерами из этой библиотеки. Так же у страницы имеются
+                    мобильная и планшетная версия</p>
+                <a class="example-link" href="https://volgaheim.com/school-young-guide_test.php"
+                    aria-label="Перейти на страницу школы юного гида"><img class="example-link--image"
+                        src="img/school_1.jpg" alt="Изображение верхней части главной страницы школы юного гида"></a>
+                <a class="example-link" href="https://volgaheim.com/school-young-guide_test.php"
+                    aria-label="Перейти на страницу школы юного гида"><img class="example-link--image"
+                        src="img/school_2.jpg" alt="Изображение контентной части главной страницы школы юного гида"></a>
+                <a class="example-link" href="https://volgaheim.com/school-young-guide_test.php"
+                    aria-label="Перейти на страницу школы юного гида"><img class="example-link--image"
+                        src="img/school_3.jpg" alt="контентной части главной страницы школы юного гида"></a>
+
+                <p class="example-text"><a class="example-link" href="https://mac77.ru/trade-in/"
+                        aria-label="Перейти на страницу интернет магазина mac77">Это</a> одна из страниц интернет
+                    магазина. Необходимо было сделать страницу без макета и "натянуть" её на WordPress. Так же у
+                    старницы имеются
+                    мобильная и планшетная версия</p>
+                <a class="example-link" href="https://mac77.ru/trade-in/"
+                    aria-label="Перейти на страницу интернет магазина mac77"><img class="example-link--image"
+                        src="img/trade_in_1.jpg" alt="Изображение верхней части страницы интернет магазина mac77"></a>
+                <a class="example-link" href="https://mac77.ru/trade-in/"
+                    aria-label="Перейти на страницу интернет магазина mac77"><img class="example-link--image"
+                        src="img/trade_in_2.jpg" alt="Изображение нижней части страницы  интернет магазина mac77"></a>
+            </div>
+            <div class="sertificate">
+                <h3 class="portfolio-subtitle content-container">Сертификаты</h3>
+                <picture class="sertificate-image content-container">
+                    <source media="(max-width: 767px)" srcset="img/sertificate-mobile.jpg">
+                    <source media="(min-width: 768px) and (max-width: 1919px)" srcset="img/sertificate-tablet.jpg">
+                    <source media="(min-width: 1920px)" srcset="img/sertificate.jpg">
+                    <img src="img/sertificate.jpg" alt="Сертификат о прохождении курсов по вёртске">
+                </picture>
+                <picture class="sertificate-image content-container">
+                    <source media="(max-width: 767px)" srcset="img/sertificate-2-mobile.jpg">
+                    <source media="(min-width: 768px) and (max-width: 1919px)" srcset="img/sertificate-2-tablet.jpg">
+                    <source media="(min-width: 1920px)" srcset="img/sertificate-2.jpg">
+                    <img src="img/sertificate-2.jpg" alt="Сертификат о прохождении курсов по адаптивной вёрстке">
+                </picture>
+                <picture class="sertificate-image content-container">
+                    <source media="(max-width: 767px)" srcset="img/sertificate-3-mobile.jpg">
+                    <source media="(min-width: 768px) and (max-width: 1919px)" srcset="img/sertificate-3-tablet.jpg">
+                    <source media="(min-width: 1920px)" srcset="img/sertificate-3.jpg">
+                    <img src="img/sertificate-3.jpg" alt="Сертификат о прохождении курсов по адаптивной вёрстке">
+                </picture>
+            </div>
+        </section>
+        <a class="modal-top" href="#home"><button class="modal-button" type="button"></button></a>
+    </main>
+    <footer class="footer container">
+        <section class="contacts content-container" id="contacts">
+            <h2 class="contacts-title">Контакты</h2>
+            <div class="contacts-item">
+                <div class="contacts-phone">
+                    Мой телефон:<br>
+                    <a class="phone" href="tel:89150183317" aria-label="связаться со мной">+7(915)-018-33-17</a>
+                </div>
+                <div class="contacts-git">
+                    Мой GitHub:<br> <a class="github-link" href="https://github.com/Bedmano?tab=repositories"
+                        aria-label="перейти на мою страницу на GitHub">https://github.com/Bedmano?tab=repositories</a>
+                </div>
+            </div>
+
+        </section>
+        <div class="footer-links content-container">
+            <a class="footer-link" href="https://vk.com/bedman39" aria-label="перейти на мою страничку в Вконтакте"><svg
+                    width="40" height="40" viewBox="0 0 27 16" fill="none">
+                    <path class="path"
+                        d="M16.138 12.51C17.094 12.201 18.318 14.55 19.621 15.449C20.599 16.13 21.348 15.983 21.348 15.983L24.821 15.933C24.821 15.933 26.636 15.821 25.778 14.379C25.707 14.259 25.275 13.31 23.193 11.357C21.016 9.31398 21.311 9.64498 23.932 6.11298C25.529 3.95998 26.168 2.64498 25.968 2.08498C25.776 1.54598 24.603 1.68598 24.603 1.68598L20.69 1.71298C20.309 1.71398 19.986 1.83198 19.839 2.22798C19.836 2.23198 19.218 3.89398 18.394 5.30698C16.653 8.29598 15.958 8.45498 15.67 8.26798C15.009 7.83498 15.176 6.53098 15.176 5.60398C15.176 2.70698 15.608 1.49898 14.33 1.18698C13.903 1.08298 13.591 1.01498 12.502 1.00498C11.11 0.983976 9.928 1.00498 9.258 1.33398C8.813 1.55698 8.472 2.04598 8.679 2.07398C8.939 2.10898 9.522 2.23398 9.834 2.65998C10.235 3.21198 10.223 4.44898 10.223 4.44898C10.223 4.44898 10.452 7.85998 9.683 8.28298C9.155 8.57298 8.433 7.98098 6.88 5.26698C6.087 3.87898 5.488 2.34498 5.488 2.34498C5.488 2.34498 5.372 2.05998 5.162 1.90398C4.912 1.71898 4.562 1.65998 4.562 1.65998L0.848 1.68398C0.848 1.68398 0.29 1.69998 0.0850002 1.94598C-0.0969998 2.16398 0.0700002 2.61398 0.0700002 2.61398C0.0700002 2.61398 2.979 9.49498 6.273 12.961C9.293 16.143 12.725 15.932 12.725 15.932H14.28C14.28 15.932 14.749 15.878 14.989 15.62C15.213 15.38 15.203 14.929 15.203 14.929C15.203 14.929 15.172 12.82 16.138 12.51Z"
+                        fill="#000000" />
+                </svg></a>
+            <a class="footer-link" href="https://github.com/Bedmano?tab=repositories"
+                aria-label="перейти на мою страницу на GitHub">
+                <svg id="Capa_1" width="40" height="40" viewBox="0 0 438.549 438.549"
+                    style="enable-background:new 0 0 438.549 438.549;">
+                    <g>
+                        <path class="path" d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
+                    c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63
+                    c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996
+                    c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136
+                    c-4.187,0.767-9.469,1.092-15.846,1c-6.374-0.089-12.991-0.757-19.842-1.999c-6.854-1.231-13.229-4.086-19.13-8.559
+                    c-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559
+                    c-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-0.951-2.568-2.098-3.711-3.429c-1.142-1.331-1.997-2.663-2.568-3.997
+                    c-0.572-1.335-0.098-2.43,1.427-3.289c1.525-0.859,4.281-1.276,8.28-1.276l5.708,0.853c3.807,0.763,8.516,3.042,14.133,6.851
+                    c5.614,3.806,10.229,8.754,13.846,14.842c4.38,7.806,9.657,13.754,15.846,17.847c6.184,4.093,12.419,6.136,18.699,6.136
+                    c6.28,0,11.704-0.476,16.274-1.423c4.565-0.952,8.848-2.383,12.847-4.285c1.713-12.758,6.377-22.559,13.988-29.41
+                    c-10.848-1.14-20.601-2.857-29.264-5.14c-8.658-2.286-17.605-5.996-26.835-11.14c-9.235-5.137-16.896-11.516-22.985-19.126
+                    c-6.09-7.614-11.088-17.61-14.987-29.979c-3.901-12.374-5.852-26.648-5.852-42.826c0-23.035,7.52-42.637,22.557-58.817
+                    c-7.044-17.318-6.379-36.732,1.997-58.24c5.52-1.715,13.706-0.428,24.554,3.853c10.85,4.283,18.794,7.952,23.84,10.994
+                    c5.046,3.041,9.089,5.618,12.135,7.708c17.705-4.947,35.976-7.421,54.818-7.421s37.117,2.474,54.823,7.421l10.849-6.849
+                    c7.419-4.57,16.18-8.758,26.262-12.565c10.088-3.805,17.802-4.853,23.134-3.138c8.562,21.509,9.325,40.922,2.279,58.24
+                    c15.036,16.18,22.559,35.787,22.559,58.817c0,16.178-1.958,30.497-5.853,42.966c-3.9,12.471-8.941,22.457-15.125,29.979
+                    c-6.191,7.521-13.901,13.85-23.131,18.986c-9.232,5.14-18.182,8.85-26.84,11.136c-8.662,2.286-18.415,4.004-29.263,5.146
+                    c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995
+                    c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906
+                    C438.536,184.851,428.728,148.168,409.132,114.573z" />
+                    </g>
+                </svg></a>
+            <a class="footer-link" href="https://t.me/Bedmano" aria-label="Открыть чат со мной в телеграм"><svg
+                    viewBox="0 0 24 24" height="40" width="40">
+                    <path class="path"
+                        d="m12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12c0-6.627-5.373-12-12-12zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z" />
+                </svg></a>
+        </div>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

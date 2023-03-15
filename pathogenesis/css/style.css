@@ -1,0 +1,1295 @@
+:root {
+  --header-text: #0d319c;
+  --orange: #f78b1f;
+  --white: #ffffff;
+  --circle: #3f4381;
+  --range-fill: #d1eaff;
+  --range-empty: #435063;
+  --pulse-bg: rgb(175, 152, 145);
+  --pulse-start: rgb(223, 144, 72);
+  --pulse-mid: rgb(225, 132, 51);
+  --pulse-end: rgb(207, 20, 55);
+}
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/GothamPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamPro-Light";
+  src: url("../fonts/GothamPro-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Medium";
+  src: url("../fonts/Lato-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato-Semibold";
+  src: url("../fonts/Lato-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyriadPro";
+  src: url("../fonts/MyriadPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.page {
+  max-width: 100%;
+  min-height: 100%;
+}
+.body {
+  font-family: "GothamPro", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  background-image: linear-gradient(
+    #358df9 0,
+    #51c3f9 37%,
+    #3774c7 40%,
+    #2a3ba7 55%,
+    #242398 65%,
+    #14185f 85%,
+    #081122 100%
+  );
+  background-repeat: no-repeat;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.container-width {
+  width: 1024px;
+  height: 768px;
+}
+/* Шапка */
+.header {
+  width: 100%;
+  height: 100%;
+  background: url(../img/header-bg.jpg);
+  background-repeat: no-repeat;
+  width: 1024px;
+  height: 768px;
+  position: relative;
+  margin: 0 auto;
+}
+.intro__header {
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--header-text);
+  width: 700px;
+  margin: 0;
+  padding-left: 73px;
+  padding-top: 145px;
+}
+/* Текст над вершинами асберга */
+.intro__item {
+  font-family: "Lato-Regular", Arial, sans-serif;
+  font-size: 20px;
+  color: var(--header-text);
+  position: absolute;
+}
+.intro__item--first {
+  top: 275px;
+  right: 260px;
+}
+
+.intro__item--second {
+  bottom: 350px;
+  left: 230px;
+}
+
+.intro__item--third {
+  bottom: 240px;
+  right: 500px;
+}
+
+.intro__item--fourth {
+  bottom: 260px;
+  right: 150px;
+}
+/* Анимированные круги */
+.pulse {
+  background-color: var(--pulse-bg);
+  border-radius: 50%;
+  opacity: 0.8;
+  border: 2px solid var(--pulse-end);
+  background-repeat: no-repeat;
+  position: relative;
+  box-sizing: border-box;
+}
+.pulse--first {
+  position: absolute;
+  content: "";
+  left: -60px;
+  top: -15px;
+}
+.pulse--second {
+  position: absolute;
+  content: "";
+  left: 45px;
+  top: 35px;
+}
+.pulse--third {
+  position: absolute;
+  content: "";
+  left: 100px;
+  top: 35px;
+}
+.pulse--fourth {
+  position: absolute;
+  content: "";
+  left: 30px;
+  top: 35px;
+}
+.pulse--big-circle {
+  width: 54px;
+  height: 54px;
+}
+.pulse--medium-circle {
+  width: 28px;
+  height: 28px;
+}
+.pulse--small-circle {
+  width: 18px;
+  height: 18px;
+}
+.pulse__first {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  animation: first 1s infinite;
+  animation-delay: 0.7s;
+  box-sizing: border-box;
+}
+
+.pulse__second {
+  width: 100%;
+  height: 100%;
+  background-color: var(--pulse-start);
+  opacity: 0.5;
+  position: absolute;
+  border-radius: 50%;
+  animation: second 1s infinite;
+  box-sizing: border-box;
+}
+
+.pulse__third {
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--pulse-mid);
+  position: absolute;
+  border-radius: 50%;
+  animation: third 1s infinite;
+  animation-delay: 0.6s;
+  box-sizing: border-box;
+}
+@keyframes first {
+  0% {
+    transform: scale(0.1, 0.1);
+    border-color: var(--pulse-start);
+    animation-timing-function: linear;
+  }
+  10% {
+    transform: scale(0.1, 0.1);
+    animation-timing-function: linear;
+  }
+  20% {
+    transform: scale(0.2, 0.2);
+    animation-timing-function: linear;
+  }
+  30% {
+    transform: scale(0.3, 0.3);
+    animation-timing-function: linear;
+  }
+  40% {
+    transform: scale(0.4, 0.4);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: scale(0.5, 0.5);
+    animation-timing-function: linear;
+  }
+  60% {
+    transform: scale(0.6, 0.6);
+    animation-timing-function: linear;
+  }
+  70% {
+    transform: scale(0.7, 0.7);
+    animation-timing-function: linear;
+  }
+  80% {
+    transform: scale(0.8, 0.8);
+    animation-timing-function: linear;
+  }
+  90% {
+    transform: scale(0.9, 0.9);
+    animation-timing-function: linear;
+    border: 1px solid var(--pulse-end);
+  }
+  100% {
+    transform: scale(1, 1);
+    animation-timing-function: linear;
+  }
+}
+@keyframes second {
+  0% {
+    transform: scale(0.1, 0.1);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: scale(0.2, 0.2);
+    animation-timing-function: linear;
+  }
+  75% {
+    transform: scale(0.3, 0.3);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: scale(0.4, 0.4);
+    animation-timing-function: linear;
+  }
+}
+@keyframes third {
+  0% {
+    transform: scale(0.1, 0.1);
+    animation-timing-function: linear;
+  }
+  20% {
+    transform: scale(0.4, 0.4);
+    animation-timing-function: linear;
+  }
+  40% {
+    transform: scale(0.4, 0.4);
+    animation-timing-function: linear;
+  }
+  60% {
+    transform: scale(0.5, 0.5);
+    animation-timing-function: linear;
+  }
+  80% {
+    transform: scale(0.6, 0.6);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: scale(0.7, 0.7);
+    animation-timing-function: linear;
+  }
+}
+/* Пагинация */
+
+.pagination {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 320px;
+  right: 27px;
+  z-index: 2;
+}
+.pagination__item {
+  list-style: none;
+  width: 14px;
+  height: 14px;
+  background-color: var(--white);
+  border-radius: 50%;
+  margin-bottom: 7px;
+}
+.pagination__item--current {
+  background-color: var(--orange);
+}
+/* Блок подсказка с прокруткой */
+.scroll {
+  position: relative;
+}
+.scroll__text {
+  font-size: 15px;
+  color: var(--white);
+  position: absolute;
+  bottom: -470px;
+  left: 460px;
+}
+/* Стрелка вниз */
+.scroll__text::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/arrow-down.svg);
+  background-repeat: no-repeat;
+  width: 43px;
+  height: 22px;
+  right: 30px;
+  top: 30px;
+}
+/* Оранжевый фон */
+.scroll__background {
+  position: absolute;
+  content: "";
+  background-image: url(../img/light.png);
+  background-repeat: no-repeat;
+  width: 1024px;
+  bottom: -509px;
+}
+
+/* Основной контент страницы */
+.main {
+  margin: 0 auto;
+  width: 1024px;
+}
+/* Стили слайдера */
+.slider {
+  position: relative;
+  touch-action: pan-y;
+  user-select: none;
+  width: 1024px;
+  height: 768px;
+}
+.slider-list {
+  overflow: hidden;
+  width: 1024px;
+  height: 768px;
+}
+.slider-list.grab {
+  cursor: grab;
+}
+
+.slider-list.grabbing {
+  cursor: grabbing;
+}
+.slider-track {
+  display: flex;
+}
+.slider-track__item {
+  width: 1024px;
+  height: 768px;
+  flex-shrink: 0;
+}
+.slider-arrows {
+  position: relative;
+  text-align: center;
+  color: red;
+}
+
+.slider-arrows--next,
+.slider-arrows--prev {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  font-size: 30px;
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  background-image: url(../img/arrow.svg);
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+}
+.slider-arrows--prev {
+  transform: rotate(180deg);
+  left: 32%;
+}
+.slider-arrows--next {
+  left:60%;
+}
+.slider-arrows--next.disabled,
+.slider-arrows--prev.disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+.title {
+  width: 1024px;
+  height: 768px;
+  background: url(../img/intro-bg.jpg);
+  background-repeat: no-repeat;
+}
+.title__main {
+  font-family: "GothamPro-Light", Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  box-sizing: border-box;
+  padding: 250px 280px;
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+}
+/* первый слайд */
+.first-slide {
+  width: 1024px;
+  height: 768px;
+  background: url(../img/first-slide-bg.jpg);
+  background-repeat: no-repeat;
+}
+.first-slide__title {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--white);
+  width: 100%;
+  padding: 115px 0px 60px 85px;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+.chains {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1024px;
+  align-content: space-between;
+  height: 260px;
+}
+
+.chains__beta {
+  order: 1;
+  width: 100%;
+  position: relative;
+}
+.chains__muscles {
+  order: 2;
+  position: relative;
+}
+.chains__center {
+  order: 3;
+  position: relative;
+}
+.chains__liver {
+  order: 4;
+  position: relative;
+}
+/* Стрелки на превом слайде */
+.chains__liver::before {
+  content: "";
+  width: 66px;
+  height: 6px;
+  position: absolute;
+  background-image: url(../img/to-left-first.png);
+  top: 50%;
+  left: -70px;
+}
+.chains__muscles::after {
+  content: "";
+  width: 61px;
+  height: 6px;
+  position: absolute;
+  background-image: url(../img/to-right-first.png);
+  top: 50%;
+  left: 85px;
+}
+.chains__center::before {
+  content: "";
+  width: 6px;
+  height: 67px;
+  position: absolute;
+  background-image: url(../img/to-down-first.png);
+  left: 50%;
+  top: -80px;
+}
+.chains__beta::after {
+  content: "";
+  width: 158px;
+  height: 133px;
+  position: absolute;
+  background-image: url(../img/to-down-right-first.png);
+  top: 50px;
+  right: 305px;
+}
+.chains__beta::before {
+  content: "";
+  width: 158px;
+  height: 133px;
+  position: absolute;
+  background-image: url(../img/to-down-right-first.png);
+  transform: scale(-1, 1);
+  top: 50px;
+  left: 305px;
+}
+
+/* Стили для круглых задников*/
+.inner {
+  background-color: var(--circle);
+  border-radius: 50%;
+}
+.inner--small-circle {
+  width: 60px;
+  height: 60px;
+}
+.inner--medium-circle {
+  width: 80px;
+  height: 80px;
+}
+/* Общие шрифты для текста в слайдере */
+.beta-outer__number,
+.muscles-outer__number,
+.liver-outer__number,
+.fat-outer__number,
+.brain-outer__number,
+.bud-outer__number,
+.alpha__number,
+.effect__number,
+.inflammation-outer__number,
+.stomach-outer__number,
+.gut-outer__number {
+  font-family: "Lato-Semibold", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--white);
+}
+.beta-outer__text,
+.muscles-outer__text,
+.liver-outer__text,
+.fat-outer__text,
+.brain-outer__text,
+.bud-outer__text,
+.alpha__text,
+.effect__text,
+.inflammation-outer__text,
+.stomach-outer__text,
+.gut-outer__text {
+  font-family: "Lato-Medium", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white);
+}
+.center {
+  font-family: "Lato-Medium", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500px;
+  color: var(--white);
+}
+.beta-outer__text--medium,
+.muscles-outer__text--medium,
+.liver-outer__text--medium {
+  font-size: 22px;
+}
+.beta-outer__text--big {
+  font-size: 25px;
+}
+.beta {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.beta__inner {
+  font-family: "Lato-Bold", Arial, sans-serif;
+  font-size: 66px;
+  text-align: center;
+  color: var(--white);
+}
+.beta-outer {
+  position: absolute;
+  top: -70px;
+  text-align: center;
+}
+.muscles {
+  position: relative;
+}
+.muscles__inner {
+  background-image: url(../img/muscles.png);
+  background-size: 65px 42px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.muscles__outer {
+  position: absolute;
+  top: -70px;
+  text-align: center;
+}
+.liver {
+  position: relative;
+}
+.liver__inner {
+  background-image: url(../img/liver.png);
+  background-size: 57px 53px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.liver__outer {
+  position: absolute;
+  top: -70px;
+  text-align: center;
+}
+.center--chains {
+  box-sizing: border-box;
+  border: solid 1px var(--white);
+  padding: 35px 55px;
+  margin-right: 80px;
+  margin-left: 80px;
+}
+/* Второй слайд */
+.second-slide {
+  width: 1024px;
+  height: 768px;
+  background: url(../img/second-slide-bg.jpg);
+  background-repeat: no-repeat;
+}
+.second-slide__title {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 400;
+  width: 100%;
+  padding: 115px 0px 60px 85px;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+/* Стили первой линии */
+.first-impact {
+  display: flex;
+  margin-left: 170px;
+  margin-bottom: 35px;
+}
+.first-impact__effect {
+  order: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 90px;
+}
+.effect__number {
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.effect__text {
+  width: 150px;
+  text-align: right;
+  padding-right: 15px;
+}
+.first-impact__beta {
+  order: 2;
+  margin-right: 90px;
+}
+.beta-outer--impact {
+  width: 100px;
+  top: -80px;
+}
+.first-impact__alpha {
+  order: 3;
+  display: flex;
+}
+.alpha__number {
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.alpha__text {
+  width: 100px;
+  padding-left: 15px;
+}
+/* Стили второй линии */
+.second-impact {
+  display: flex;
+  justify-content: center;
+  margin-left: 100px;
+  margin-bottom: 35px;
+}
+.second-impact__bud {
+  order: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+  margin-top: 40px;
+}
+.bud__inner {
+  background-image: url(../img/bud.png);
+  background-size: 44px 46px;
+  background-repeat: no-repeat;
+  background-position: 3px 5px;
+}
+.bud-outer {
+  padding-right: 15px;
+}
+.second-impact__center {
+  order: 2;
+}
+.center--second-impact {
+  box-sizing: border-box;
+  border: solid 1px var(--white);
+  padding: 55px 100px;
+  margin-right: 32px;
+  margin-left: 32px;
+}
+.second-impact__fat {
+  order: 3;
+  display: flex;
+  margin-top: 40px;
+}
+.fat__inner {
+  background-image: url(../img/fat.png);
+  background-size: 46px 46px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.fat-outer {
+  padding-left: 15px;
+}
+/* Стили третьей линии */
+.third-impact {
+  display: flex;
+  justify-content: center;
+}
+.third-impact__brain {
+  order: 1;
+}
+.brain {
+  position: relative;
+}
+.brain__inner {
+  background-image: url(../img/brain.png);
+  background-size: 46px 42px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.brain-outer {
+  position: absolute;
+  text-align: center;
+  left: -13px;
+  top: 70px;
+}
+.third-impact__liver {
+  order: 2;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+.liver__inner--small {
+  background-size: 45px 39px;
+}
+.liver-outer--impact {
+  top: 70px;
+  left: -7px;
+}
+.third-impact__muscles {
+  order: 3;
+}
+.muscles__inner--small {
+  background-size: 58px 37px;
+}
+.muscles-outer--impact {
+  top: 70px;
+  left: -7px;
+}
+/*  Стрелки на втором слайде*/
+.first-impact__beta,
+.first-impact__effect,
+.first-impact__alpha,
+.second-impact__fat,
+.second-impact__bud,
+.third-impact__muscles,
+.third-impact__liver,
+.third-impact__brain {
+  position: relative;
+}
+.first-impact__beta::after {
+  content: "";
+  width: 6px;
+  height: 33px;
+  position: absolute;
+  background-image: url(../img/second-slide-arrow.png);
+  transform: scale(1, -1);
+  left: 50%;
+  top: 60px;
+}
+.first-impact__effect::after {
+  content: "";
+  width: 6px;
+  height: 33px;
+  position: absolute;
+  background-image: url(../img/second-slide-arrow.png);
+  transform: scale(1, -1);
+  left: 85%;
+  top: 60px;
+}
+.first-impact__alpha::after {
+  content: "";
+  width: 6px;
+  height: 33px;
+  position: absolute;
+  background-image: url(../img/second-slide-arrow.png);
+  transform: scale(1, -1);
+  left: 15%;
+  top: 60px;
+}
+.second-impact__fat::after {
+  content: "";
+  min-width: 6px;
+  min-height: 33px;
+  position: absolute;
+  background-image: url(../img/second-slide-arrow.png);
+  transform: rotate(-90deg);
+  top: 10%;
+  left: -20px;
+}
+.second-impact__bud::after {
+  content: "";
+  width: 6px;
+  height: 33px;
+  position: absolute;
+  background-image: url(../img/second-slide-arrow.png);
+  transform: rotate(90deg);
+  top: 10%;
+  right: -20px;
+}
+.third-impact__muscles::after {
+  content: "";
+  width: 6px;
+  height: 33px;
+  position: absolute;
+  background-image: url(../img/second-slide-arrow.png);
+  left: 45%;
+  top: -33px;
+}
+.third-impact__liver::after {
+  content: "";
+  width: 6px;
+  height: 33px;
+  position: absolute;
+  background-image: url(../img/second-slide-arrow.png);
+  left: 45%;
+  top: -33px;
+}
+.third-impact__brain::after {
+  content: "";
+  width: 6px;
+  height: 33px;
+  position: absolute;
+  background-image: url(../img/second-slide-arrow.png);
+  left: 45%;
+  top: -33px;
+}
+
+/* третий слайд */
+.third-slide {
+  width: 1024px;
+  height: 768px;
+  background: url(../img/third-slide-bg.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tree__title {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 400;
+  width: 100%;
+  padding: 115px 0px 0px 85px;
+  margin: 0;
+  box-sizing: border-box;
+  height: 35px;
+}
+/* Левая часть третьего слайда */
+.first-tree {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  margin-top: 30px;
+}
+.gut {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.first-tree__gut {
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.gut__inner {
+  background-image: url(../img/gut.png);
+  background-size: 43px 62px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.gut-outer {
+  text-align: right;
+  position: relative;
+  width: 130px;
+  position: absolute;
+  right: 90px;
+  top: -10px;
+}
+.inflammation {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 75px;
+}
+.first-tree__inflammation {
+  padding-right: 20px;
+}
+.inflammation__inner {
+  background-image: url(../img/inflammation.png);
+  background-size: 48px 46px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.inflammation__outer {
+  text-align: right;
+  position: absolute;
+  right: 90px;
+  top: -10px;
+}
+.inflammation-outer__additional {
+  position: absolute;
+  color: var(--white);
+  font-family: "Lato-Medium", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  bottom: -20px;
+  right: -70px;
+}
+.stomach {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 20px;
+  position: relative;
+}
+.stomach__inner {
+  background-image: url(../img/stomach.png);
+  background-size: 42px 42px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.stomach__outer {
+  text-align: right;
+  position: absolute;
+  right: 90px;
+  top: -5px;
+}
+/* Центральная часть третьего слайда */
+.second-tree {
+  width: 34%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.second-tree__beta {
+  flex-basis: 100%;
+  align-self: flex-start;
+  order: 1;
+  margin-bottom: 40px;
+}
+.second-tree__effect {
+  flex-basis: 45%;
+  text-align: right;
+  order: 2;
+}
+.effect__text--tree {
+  padding-right: 0;
+}
+.second-tree__alpha {
+  flex-basis: 46%;
+  order: 3;
+  position: relative;
+}
+.alpha__text--tree {
+  padding-left: 0;
+}
+.alpha__additional {
+  position: absolute;
+  color: var(--white);
+  font-family: "Lato-Medium", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  left: 0;
+  bottom: 20px;
+}
+.second-tree__center {
+  order: 4;
+  flex-basis: 100%;
+  text-align: center;
+  align-self: center;
+  height: 50px;
+}
+.center--tree {
+  font-size: 25px;
+}
+.second-tree__bud {
+  order: 5;
+  position: relative;
+  margin-bottom: 5px;
+}
+.bud__outer--tree {
+  position: absolute;
+  left: -70px;
+  top: 0px;
+  text-align: right;
+}
+/* Правая часть третьего слайда */
+.third-tree {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 33%;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.third-slide__column {
+  height: 470px;
+}
+.third-tree__brain {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.brain-outer--tree {
+  top: -5px;
+  left: 70px;
+  text-align: left;
+}
+.aside {
+  background-image: linear-gradient(var(--circle), transparent);
+  height: 320px;
+  width: 260px;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.aside__title {
+  color: var(--white);
+  font-family: "Lato-Medium", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  align-self: center;
+  order: 1;
+}
+.aside__liver {
+  padding-left: 15px;
+  order: 2;
+  position: relative;
+  margin-bottom: 25px;
+}
+.liver-outer--tree {
+  left: 90px;
+  top: -10px;
+  text-align: left;
+}
+.aside__muscles {
+  padding-left: 15px;
+  order: 3;
+  position: relative;
+  margin-bottom: 25px;
+}
+.muscles-outer--tree {
+  left: 90px;
+  top: -10px;
+  text-align: left;
+}
+.aside__fat {
+  padding-left: 15px;
+  order: 4;
+  position: relative;
+}
+.fat-outer--tree {
+  position: absolute;
+  left: 75px;
+  top: -10px;
+}
+/* Стрелки на третьем слайде */
+
+.first-tree__gut,
+.first-tree__inflammation,
+.first-tree__stomach,
+.second-tree__beta,
+.second-tree__effect,
+.second-tree__alpha,
+.second-tree__bud,
+.second-tree__center,
+.third-tree__aside,
+.third-tree__brain {
+  position: relative;
+}
+.first-tree__gut::after {
+  content: "";
+  width: 117px;
+  height: 27px;
+  position: absolute;
+  background-image: url(../img/gut-arrow.svg);
+  top: -10px;
+  right: -110px;
+  background-size: 117px 27px;
+}
+.first-tree__inflammation::after {
+  content: "";
+  width: 139px;
+  height: 87px;
+  position: absolute;
+  background-image: url(../img/inflammation-arrow.svg);
+  top: -75px;
+  right: -125px;
+  background-size: 139px 87px;
+}
+.inflammation-outer__additional::after {
+  content: "";
+  width: 6px;
+  height: 24px;
+  position: absolute;
+  background-image: url(../img/amilin-to-stomach.svg);
+  top: 20px;
+  right: 30px;
+  background-size: 6px 24px;
+}
+.inflammation-outer__additional::before {
+  content: "";
+  width: 89px;
+  height: 44px;
+  position: absolute;
+  background-image: url(../img/amilin-to-hyper.svg);
+  top: 30px;
+  right: -85px;
+  background-size: 89px 44px;
+}
+.first-tree__stomach::after {
+  content: "";
+  width: 72px;
+  height: 6px;
+  position: absolute;
+  background-image: url(../img/stomach-to-hyper.svg);
+  top: 30px;
+  right: -65px;
+  background-size: 72px 6px;
+}
+.second-tree__beta::before {
+  content: "";
+  width: 184px;
+  height: 145px;
+  position: absolute;
+  background-image: url(../img/beta-to-amilin.svg);
+  top: 85px;
+  right: 210px;
+  background-size: 184px 145px;
+}
+.second-tree__beta::after {
+  content: "";
+  width: 6px;
+  height: 217px;
+  position: absolute;
+  background-image: url(../img/beta-to-hyper.svg);
+  top: 85px;
+  left: 170px;
+  background-size: 6px 217px;
+}
+.second-tree__effect::before {
+  content: "";
+  width: 6px;
+  height: 72px;
+  position: absolute;
+  background-image: url(../img/beta-to-effect.svg);
+  top: -72px;
+  left: 147px;
+  background-size: 6px 72px;
+}
+.second-tree__effect::after {
+  content: "";
+  width: 6px;
+  height: 60px;
+  position: absolute;
+  background-image: url(../img/effect-to-hyper.svg);
+  top: 86px;
+  left: 147px;
+  background-size: 6px 60px;
+}
+.second-tree__alpha::before {
+  content: "";
+  width: 6px;
+  height: 72px;
+  position: absolute;
+  background-image: url(../img/beta-to-alpha.svg);
+  top: -72px;
+  left: 4px;
+  background-size: 6px 72px;
+}
+.second-tree__alpha::after {
+  content: "";
+  width: 6px;
+  height: 19px;
+  position: absolute;
+  background-image: url(../img/alpha-to-gluck.svg);
+  top: 68px;
+  left: 4px;
+  background-size: 6px 19px;
+}
+.alpha__additional::after {
+  content: "";
+  width: 6px;
+  height: 32px;
+  position: absolute;
+  background-image: url(../img/gluck-to-hyper.svg);
+  top: 25px;
+  left: 4px;
+  background-size: 6px 32px;
+}
+.second-tree__bud::after {
+  content: "";
+  width: 29px;
+  height: 24px;
+  position: absolute;
+  background-image: url(../img/hyper-to-bud.svg);
+  top: -35px;
+  left: 13px;
+  background-size: 29px 24px;
+}
+.third-tree__brain::before {
+  content: "";
+  width: 116px;
+  height: 26px;
+  position: absolute;
+  background-image: url(../img/beta-brain-arrow.svg);
+  top: -10px;
+  left: -120px;
+  background-size: 116px 26px;
+}
+.third-tree__brain::after {
+  content: "";
+  width: 17px;
+  height: 24px;
+  position: absolute;
+  background-image: url(../img/brain-to-resist.svg);
+  top: 60px;
+  left: 70px;
+  background-size: 17px 24px;
+}
+.third-tree__aside::before {
+  content: "";
+  width: 139px;
+  height: 87px;
+  position: absolute;
+  background-image: url(../img/resist-arrow.svg);
+  top: -75px;
+  left: -135px;
+  background-size: 139px 87px;
+}
+.return {
+  position: fixed;
+  display: block;
+  z-index:10;
+  bottom:0;
+  left:0;
+  padding:20px;
+  background-color:gray;
+  opacity:0.5;
+  color:white;
+}
+.return:hover{
+  opacity:1;
+}
